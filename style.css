@@ -273,3 +273,16 @@ footer .legal{flex-basis:100%;margin:0;padding-top:16px;border-top:1px solid var
 .acard .body{padding:16px 18px 20px}
 .acard h3{font-size:1.5rem}
 .acard p{color:var(--mute);font-size:.96rem;margin-top:6px}
+
+/* mobile+desktop image alignment */
+.post img,.acard img,.spot img{height:auto}
+.ph{position:relative;overflow:hidden;background:#061a12}
+.ph:before{content:"";position:absolute;inset:-24px;background:var(--ph) center/cover no-repeat;filter:blur(20px) brightness(.5)}
+.ph img{position:relative;width:100%;height:auto;display:block}
+.news .ph img{aspect-ratio:1/1;object-fit:contain}
+.acard .ph img{aspect-ratio:4/3;object-fit:contain}
+@media (max-width:860px){.post img,.acard img,.spot img,.news .ph img,.acard .ph img{aspect-ratio:auto;object-fit:contain}}
+@media (max-width:640px){.hero .bg{background-position:center top}}
+
+.feature-post.wide{grid-template-columns:1fr}
+.feature-post.wide .body{padding:22px 28px 26px}
